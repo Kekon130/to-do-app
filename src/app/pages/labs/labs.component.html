@@ -1,1 +1,23 @@
-<p>labs works!</p>
+<h1>Hola, es mi primer proyecto</h1>
+<!--De esta forma se accede a variables de la clase desde el HTML en Angular-->
+<h2>{{ welcome }}</h2>
+<ul>
+  <!--Así se ejecuta un bucle for desde el HTML con Angular-->
+  @for (task of tasks; track $index) {
+  <li>{{ task }}</li>
+  }
+</ul>
+
+<hr />
+
+<!--Se puede ejecutar código de ts directamente desde el HTML-->
+<h2>{{ "Hola".repeat(4) }}</h2>
+<p>La suma de 3 + 3 es {{ 3 + 3 }}</p>
+<p>Hola, mi nombre es {{ person.name }} y tengo {{ person.age }} años</p>
+
+<hr />
+
+<!--Para anclar el valor de una popiedad de los elementos HTML a una variable con Angular usamos []-->
+<img [src]="person.avatar" alt="" />
+<input type="text" [value]="person.name" />
+<button [disabled]="disabled">Click me</button>
