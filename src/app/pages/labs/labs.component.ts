@@ -22,4 +22,16 @@ export class LabsComponent {
     age: 22,
     avatar: "https://fastly.picsum.photos/id/903/200/200.jpg?hmac=lxHKyjlQqAkKyuVGkgUCO_jdWkg3osj3nTuULFHZxH8"
   }
+
+  clickHandler() {
+    alert('Hola');
+  }
+
+  doubleClickHandler() {
+    alert('Adios');
+  }
+
+  changeHandler(event: Event) {
+    console.log(event);
+  }
 }
